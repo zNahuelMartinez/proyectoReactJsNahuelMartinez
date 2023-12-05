@@ -1,13 +1,17 @@
+import ItemListContainer from './componentes/ItemListContainer'
+import NavBar from './componentes/navBar/NavBar'
+
 import './App.css'
+
 
 function App() {
 
   return (
-    <>
       <div>
-        <h1>App React JS</h1>
+        <NavBar />
+        <ItemListContainer Prop = {"Hola, soy una prop"}  />
+        <ItemListContainer Prop = {"El proyecto va a ser una web de zapatillas"}  />
       </div>
-    </>
   )
 }
 
