@@ -1,5 +1,3 @@
-import "./itemListContainer.css"
-
 const ItemListContainer = ({Prop}) => {
 
 

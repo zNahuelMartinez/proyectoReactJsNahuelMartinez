@@ -5,7 +5,7 @@ const CartWidget = () => {
 
   return (
     <div id="cartWidget">
-        <FaShoppingCart size={25}/>
+        <FaShoppingCart size={30}/>
         <p>1</p>
     </div>
   )
