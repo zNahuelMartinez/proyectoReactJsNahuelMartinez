@@ -3,6 +3,7 @@ const productos = [
     {
         id:"asdq1" ,
         nombre:"Zapatillas Puma Slipstream Retro" ,
+        categoria:"Puma",
         stock:15 ,
         precio:100000 ,
         imagen: "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwda281c52/products/PU389021-02/PU389021-02-1.JPG",
@@ -11,6 +12,7 @@ const productos = [
     {
         id:"asdq2" ,
         nombre:"Zapatillas Adidas Forum Low" ,
+        categoria:"Adidas",
         stock:7 ,
         precio:130000,
         imagen: "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw6a515447/products/ADHQ1494/ADHQ1494-1.JPG",
@@ -19,6 +21,7 @@ const productos = [
     {
         id:"asdq3" ,
         nombre:"Zapatillas Nike Air Max Excee" ,
+        categoria:"Nike",
         stock:5 ,
         precio:115000,
         imagen: "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw0da26251/products/NICD4165-118/NICD4165-118-1.JPG",

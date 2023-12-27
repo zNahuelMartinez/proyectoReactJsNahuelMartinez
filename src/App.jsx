@@ -1,7 +1,7 @@
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
 import NavBar from './componentes/navBar/NavBar'
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import './main.scss'
 
@@ -9,11 +9,15 @@ import './main.scss'
 function App() {
 
   return (
-      <div>
+    <BrowserRouter>
         <NavBar />
-        <ItemListContainer Prop = {"Hola, soy una prop"}/>
-        <ItemDetailContainer/>
-      </div>
+
+        <Routes>
+          <Route path='/' element={<ItemListContainer Prop = {"Hola, soy una prop"}/>}/>
+          <Route path='/categorias/:categoria' element={<ItemListContainer Prop = {"Hola, soy una prop"}/>}/>
+          {/* <ItemDetailContainer/> */}
+        </Routes>
+    </BrowserRouter>
   )
 }
 

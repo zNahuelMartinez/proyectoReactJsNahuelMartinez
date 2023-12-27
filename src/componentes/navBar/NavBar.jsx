@@ -1,12 +1,13 @@
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark" >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img src="zapalogo.png" alt="logo zapatilla" className="logo" />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,24 +22,24 @@ const NavBar = () => {
         <div className="collapse navbar-collapse d-flex justify-content-center center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className="nav-item ">
-              <a className="nav-link active" href="#">
+              <Link className="nav-link active" to="/categorias/Nike">
                 Nike
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="#">
+              <Link className="nav-link active" to="/categorias/Adidas">
                 Adidas
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="#">
+              <Link className="nav-link active" to="/categorias/Puma">
                 Puma
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react"
 import obtenerProductos from "../utilidades/data"
 import ItemList from "../ItemList/itemList"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
+    const {categoria } = useParams()
 
     useEffect(()=>{
         obtenerProductos
         .then((respuesta)=>{
-            setProductos(respuesta)
+            if(categoria){
+                const productoFiltrado = respuesta.filter((producto)=> producto.categoria === categoria)
+                setProductos(productoFiltrado)
+            }
+            else{
+                setProductos(respuesta)
+            }
         })
         .catch((error)=>{
             console.log(error)
@@ -17,7 +25,7 @@ const ItemListContainer = () => {
         .finally(()=>{
             console.log("Finalizo la promesa")
         })
-    }, [])
+    }, [categoria])
 
     return(
         <div id="itemListContainer">
