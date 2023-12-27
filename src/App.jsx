@@ -1,5 +1,7 @@
-import ItemListContainer from './componentes/ItemListContainer'
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
 import NavBar from './componentes/navBar/NavBar'
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer'
+
 
 import './main.scss'
 
@@ -9,8 +11,8 @@ function App() {
   return (
       <div>
         <NavBar />
-        <ItemListContainer Prop = {"Hola, soy una prop"}  />
-        <ItemListContainer Prop = {"El proyecto va a ser una web de zapatillas"}  />
+        <ItemListContainer Prop = {"Hola, soy una prop"}/>
+        <ItemDetailContainer/>
       </div>
   )
 }

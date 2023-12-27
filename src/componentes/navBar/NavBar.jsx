@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark" >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="/public/zapalogo.png" alt="logo zapatilla" className="logo" />
+          <img src="zapalogo.png" alt="logo zapatilla" className="logo" />
         </a>
         <button
           className="navbar-toggler"
