@@ -27,7 +27,6 @@ const Item = ({producto}) => {
         <p>Stock: {producto.stock}</p>
         <p>Precio: ${producto.precio}</p>
         <Link to={`/detalle/${producto.id}`} className="link"><button className="botonDetalles">Ver detalles</button></Link>
-        <ItemCount stock = {producto.stock} onAdd={(contador) => console.log('Se agregaron', contador, producto.nombre, 'al carrito')}/>
     </div>
   )
 }

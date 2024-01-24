@@ -5,10 +5,10 @@ const CartContext = createContext()
 
 //Creamos el componente CartProvider
 //Sirve de proveedor del contexto
-
 const CartProvider = ({children})=>{
     const [carrito, setCarrito] = useState([])
     
+    console.log(carrito)
     const añadirProducto = (producto)=>{
         const condicion = estaEnElCarrito(producto.id)
         if(condicion){
@@ -29,7 +29,7 @@ const CartProvider = ({children})=>{
     }
 
     const totalCantidad = ()=>{
-        carrito.reduce((total, producto)=> total + producto.cantidad, 0)
+        return carrito.reduce((total, producto)=> total + producto.cantidad, 0)
     }
 
     const borrarCarrito = ()=>{

@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <Link to="/carrito" id="cartWidget">
         <FaShoppingCart size={30}/>
-        <p>{totalCantidad(0)}</p>
+        <p>{totalCantidad()}</p>
     </Link>
   )
 }

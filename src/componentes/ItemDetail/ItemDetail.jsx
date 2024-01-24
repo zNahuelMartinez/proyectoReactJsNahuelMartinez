@@ -7,12 +7,11 @@ import { CartContext } from "../../context/CartContext";
 const ItemDetail = ({ producto }) => {
   const [toggle, setToggle] = useState(false);
   const { añadirProducto } = useContext(CartContext)
-
   const agregarAlCarrito = (contador) => {
-    const productoNuevo = {...producto, cantidad: contador }
-    añadirProducto(productoNuevo)
-    setToggle(true);
-  };
+          const productoNuevo = {...producto, cantidad: contador}
+          añadirProducto(productoNuevo)
+          setToggle(true);
+    };
 
   return (
     <div className="itemDetailDiv">
@@ -23,7 +22,6 @@ const ItemDetail = ({ producto }) => {
         <h3 className="nombreZapa">{producto.nombre}</h3>
         <p>Stock: {producto.stock}</p>
         <p>${producto.precio}</p>
-        
         {toggle ? (
         <>
             <Link to="/carrito">
@@ -46,7 +44,6 @@ const ItemDetail = ({ producto }) => {
 
         )}  
         <p className="descripcion">{producto.descripcion}</p> 
-        {/* <ItemCount stock = {producto.stock} onAdd={(contador) => console.log('Se agregaron', contador, producto.nombre, 'al carrito')}/> */}
       </div>
     </div>
   )
