@@ -1,10 +1,28 @@
 .itemDetailDiv{
 
+    display: flex;
+
     text-align: center;
     .imgDetail{
         width: 600px;
+        margin: 150px 0 0 200px;
     }
     .descripcion{
-        padding: 0 450px;
+        padding: 50px 250px 0 250px;
     }
+    .botonTerminarCompra{
+        border: none;
+        border-radius: 4px;
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .nombreZapa{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
 }

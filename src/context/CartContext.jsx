@@ -1,0 +1,53 @@
+import { createContext, useState } from "react";
+
+//Creamos un contexto llamado CartContext
+const CartContext = createContext()
+
+//Creamos el componente CartProvider
+//Sirve de proveedor del contexto
+
+const CartProvider = ({children})=>{
+    const [carrito, setCarrito] = useState([])
+    
+    const añadirProducto = (producto)=>{
+        const condicion = estaEnElCarrito(producto.id)
+        if(condicion){
+            const productosModificados = carrito.map((productoCarrito)=>{
+                if(productoCarrito.id === producto.id){
+                    return{ ...productoCarrito, cantidad: productoCarrito.cantidad + producto.cantidad}
+                }
+            })
+
+            setCarrito(productosModificados)
+        }else{
+            setCarrito([...carrito, producto])
+        }
+    }
+
+    const estaEnElCarrito = (idProducto)=>{
+        carrito.some((producto)=> producto.id === idProducto)
+    }
+
+    const totalCantidad = ()=>{
+        carrito.reduce((total, producto)=> total + producto.cantidad, 0)
+    }
+
+    const borrarCarrito = ()=>{
+        setCarrito([])
+    }
+
+    const borrarProducto = (idProducto)=>{ 
+        const productosFiltrados = carrito.filter((producto)=> producto.id !== idProducto)
+        setCarrito(productosFiltrados)
+    }
+
+    return (
+        //primer llave es para poner codigo js adentro, la segunda llave es para enviar el objeto
+        <CartContext.Provider value={{carrito, añadirProducto, totalCantidad, borrarCarrito, borrarProducto}}> 
+            {children}
+        </CartContext.Provider>
+    )
+
+}
+
+export {CartProvider, CartContext}
