@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark" >
+    <nav className="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src="/zapalogo.png" alt="logo zapatilla" className="logo" />
@@ -19,7 +19,10 @@ const NavBar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse d-flex justify-content-center center" id="navbarNav">
+        <div
+          className="collapse navbar-collapse d-flex justify-content-center center"
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">
@@ -43,7 +46,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <CartWidget/>
+        <CartWidget />
       </div>
     </nav>
   );
